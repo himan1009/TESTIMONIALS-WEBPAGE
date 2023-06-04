@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTIMONIALS PAGE</title>
+    <link rel="stylesheet" href="stytle.css">
+    <script src="https://kit.fontawesome.com/dcabbbb5dd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="testimonial">
+            <div class="testimonial-text">
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore magni, vel architecto corrupti deleniti nobis laborum minima? Deleniti incidunt suscipit illo reiciendis earum? Deserunt ullam eligendi nam nemo ducimus alias!</p>
+                    <span>JOHN RYAN, CEO HUMBLE</span>
+                </div>
+
+                <div class="user-text active-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore magni, vel architecto corrupti deleniti nobis laborum minima? Deleniti incidunt suscipit illo reiciendis earum? Deserunt ullam eligendi nam nemo ducimus alias!</p>
+                    <span>SIMON, CEO META</span>
+                </div>
+
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore magni, vel architecto corrupti deleniti nobis laborum minima? Deleniti incidunt suscipit illo reiciendis earum? Deserunt ullam eligendi nam nemo ducimus alias!</p>
+                    <span>PEENTAL, CEO BUMBLE</span>
+                </div>
+
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore magni, vel architecto corrupti deleniti nobis laborum minima? Deleniti incidunt suscipit illo reiciendis earum? Deserunt ullam eligendi nam nemo ducimus alias!</p>
+                    <span>DENISH, CEO NEVER</span>
+                </div>
+
+                <div class="user-text">
+                    <i class="fa-solid fa-quote-left"></i>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore magni, vel architecto corrupti deleniti nobis laborum minima? Deleniti incidunt suscipit illo reiciendis earum? Deserunt ullam eligendi nam nemo ducimus alias!</p>
+                    <span>LINGO, CEO ALWAYS</span>
+                </div>
+            </div>
+            <div class="testimonial-pic">
+                <img src="images/user1.png" alt="" class="user-pic" onclick="showreview()">
+                <img src="images/user2.png" alt="" class="user-pic active-pic" onclick="showreview()">
+                <img src="images/user3.png" alt="" class="user-pic" onclick="showreview()">
+                <img src="images/user4.png" alt="" class="user-pic" onclick="showreview()">
+                <img src="images/user5.png" alt="" class="user-pic" onclick="showreview()">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let usertexts=document.getElementsByClassName("user-text");
+        let userpics=document.getElementsByClassName("user-pic");
+
+        function showreview(){
+            for(userpic of userpics){
+                userpic.classList.remove("active-pic");
+            }
+            for(usertext of usertexts){
+                usertext.classList.remove("active-text");
+            }
+
+            let i=Array.from(userpics).indexOf(event.target);
+
+            userpics[i].classList.add("active-pic");
+            usertexts[i].classList.add("active-text");
+        }
+    </script>
+</body>
+</html>
